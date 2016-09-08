@@ -1,0 +1,27 @@
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'java'
+
+version = '0.0.1-SNAPSHOT'
+group = 'com.liftoff.social.newsreader'
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile     		"commons-io:commons-io:2.5", 
+    "org.springframework:spring-context:4.3.2.RELEASE",
+     		"org.slf4j:slf4j-ext:1.7.21",
+     		"org.springframework:spring-test:4.0.5.RELEASE"
+     		
+     		
+     		
+    testCompile "junit:junit:4.12"
+}
+
+configurations.all {
+    resolutionStrategy.cacheDynamicVersionsFor 0, 'seconds'
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
